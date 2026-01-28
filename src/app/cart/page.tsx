@@ -1,9 +1,51 @@
+import Image from 'next/image'
 import React from 'react'
 
 const CartPage = () => {
   return (
-    <div>
-      CartPage
+    <div className='h-[calc(100vh-6rem)] md:h-[calc(100vh-9rem)] flex flex-col text-green-500'>
+      {/* PRODUCT CONTAINER */}
+      <div className='h-1/2 p-4 flex flex-col justify-center overflow-scroll'>
+        {/* SINGLE ITEM CONTAINER */}
+        <div className='flex items-center justify-between mb-4'>
+          <Image src="/temporary/p1.png" alt="" width={100} height={100} />
+          <div className=''>
+            <h1 className='uppercase text-xl font-bold'>Imbicilian</h1>
+            <span>Largo</span>
+          </div>
+          <h2 className='font-bold'>$27.90</h2>
+          <span className='cursor-pointer'>X</span>
+        </div>
+
+        <div className='flex items-center justify-between mb-4'>
+          <Image src="/temporary/p1.png" alt="" width={100} height={100} />
+          <div className=''>
+            <h1 className='uppercase text-xl font-bold'>Imbicilian</h1>
+            <span>Largo</span>
+          </div>
+          <h2 className='font-bold'>$27.90</h2>
+          <span className='cursor-pointer'>X</span>
+        </div>
+
+        <div className='flex items-center justify-between mb-4'>
+          <Image src="/temporary/p1.png" alt="" width={100} height={100} />
+          <div className=''>
+            <h1 className='uppercase text-xl font-bold'>Imbicilian</h1>
+            <span>Largo</span>
+          </div>
+          <h2 className='font-bold'>$27.90</h2>
+          <span className='cursor-pointer'>X</span>
+        </div>
+      </div>
+      {/* PAYMENT CONTAINER */}
+      <div className='h-1/2 p-4 bg-lime-50 flex flex-col gap-4 justify-center'>
+        <div className='flex justify-between'>
+          <span className=''>Subtotal (3 items)</span>
+          <span className=''>$29.10</span>
+        </div>
+        <hr className='' />
+        <button className='bg-green-500 text-white p-3 rounded-md w-1/2'>CHECKOUT</button>
+      </div>
     </div>
   )
 }
